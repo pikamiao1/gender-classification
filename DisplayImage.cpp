@@ -1,13 +1,12 @@
-#include <cv.h>
-#include <highgui.h>
+#include <stdio.h>
+#include <opencv2/opencv.hpp>
 
-using namespace std;
 using namespace cv;
 
-int main(){
+int main(int argc, char** argv){
 
     Mat image;
-    image = imread("test.bmp", CV_LOAD_IMAGE_UNCHANGED);   // Read the file
+    image = imread("test.bmp", 1);   // Read the file
 
     if(! image.data )                              // Check for invalid input
     {
@@ -15,7 +14,7 @@ int main(){
         return -1;
     }
 
-    namedWindow( "Display window", CV_WINDOW_AUTOSIZE );// Create a window for display.
+    namedWindow( "Display window", WINDOW_AUTOSIZE );// Create a window for display.
     imshow( "Display window", image );                   // Show our image inside it.
 
     waitKey(0);   
