@@ -5,9 +5,7 @@ Project for COMP7502
 Gender Classification  
 
 Group 23:  
-    LIN Zhen  
-    XU Linxiao  
-    ZHU Yilei  
+    LIN Zhen XU Linxiao ZHU Yilei  
 
 
 # dependency
@@ -16,10 +14,10 @@ opencv 2.4.9 <br />
 boost 1.60.0 <br />
 
 MacOS: <br />
-    brew install opencv boost <br />
+----- brew install opencv boost <br />
 
 ubuntu: <br />
-    apt-get install opencv boost <br />
+---- apt-get install opencv boost <br />
 
 
 # build  
@@ -36,62 +34,62 @@ make <br />
 
 ## training program  
 
-usage: ./train /path/to/test/folder [det]  <br />
-train folder must have 2 subdir: female and male  <br />
+**usage: ./train /path/to/test/folder [det]**  <br />
 
 e.g.
-    ./train trainSet       # will look for folder: trainSet_output <br />
-                           # if exists，then will not do face-detection again <br />
-    ./train trainSet det   # force re-do face-detection  <br />
+    ./train trainSet------- # will look for folder: trainSet_output <br />
+    ----------------------- # if exists，then will not do face-detection again <br />
+    ----------------------- # train folder must have 2 subdir: female and male  <br />
+    ./train trainSet det--- # force re-do face-detection  <br />
 
 
 ## test program  
 
-usage: ./test /path/to/test/file/or/folder [cal]  <br />
+**usage: ./test /path/to/test/file/or/folder [cal]**  <br />
 
 e.g.  
-    ./test testpic/1.jpg        # output gender result only  <br />
-    ./test testSet       cal    # output calssfication precision <br />
-                                # test folder for calulation must have 2 subdir: female and male <br />
+    ./test testpic/1.jpg------- # output gender result only  <br />
+    ./test testSet cal--------- # output calssfication precision <br />
+    --------------------------- # test folder for calulation must have 2 subdir: female and male <br />
 
 
 # file list
 
-README.md                         # current file  <br />
-haarcascade_frontalface_alt.xml   # face detection from opencv 2.4.9  <br />
+README.md ------------------------# current file  <br />
+haarcascade_frontalface_alt.xml --# face detection from opencv 2.4.9  <br />
 
-src/                              # all source file  <br />
-trainSet/                         # training set, including female and male pics <br />
-testPic/                          # test picutres <br />
-testSet/                          # test set for precision evaluation <br />
+src/ ---------------------------- # all source file  <br />
+trainSet/ ----------------------- # training set, including female and male pics <br />
+testPic/ ------------------------ # test picutres <br />
+testSet/ ------------------------ # test set for precision evaluation <br />
 
-ignore/                           # reference file and scripts, can ignore <br />
+ignore/ ------------------------- # reference file and scripts, can ignore <br />
 
 
 ## source files under src/
 
-CMakeLists.txt                    # cmake file  <br />
+CMakeLists.txt ------------------ # cmake file  <br />
 
-trMain.cpp                        # entry point for training <br />
-testMain.cpp                      # entry point for test <br />
+trMain.cpp ---------------------- # entry point for training <br />
+testMain.cpp -------------------- # entry point for test <br />
 
-myGabor.h                         # OUR own feature extraction algorithm <br />
+myGabor.h ----------------------- # OUR own feature extraction algorithm <br />
 myGabor.cpp <br />
 
-pcaImpl.h                         # OUR own PCA algorithm  <br />
+pcaImpl.h ----------------------- # OUR own PCA algorithm  <br />
 pcaImpl.cpp <br />
 
-utils.h                            # shared by trMain and testMain <br />
+utils.h ------------------------- # shared by trMain and testMain <br />
 utils.cpp <br />
 
 
 # Result and video demo
 
 Result: <br />
-    precesion up to 79% <br />
+------ both female and male recognition precesion up to 79% <br />
 
 Demo: <br />
-    https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be <br />
+------ https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be <br />
 
 
 
