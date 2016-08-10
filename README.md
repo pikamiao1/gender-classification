@@ -1,16 +1,16 @@
 # face-master
+Aug 2016
 
-project for COMP7502
-Group 23, Aug 2016
+Project for COMP7502
+Gender Classification
 
-LIN Zhen    3035238333
-XU Linxiao  3035237896
-ZHU Yilei   3035268948
+Group 23:
+    LIN Zhen
+    XU Linxiao
+    ZHU Yilei
 
 
-//============
-// dependency
-//============
+# dependency
 
 opencv 2.4.9
 boost 1.60.0
@@ -22,9 +22,7 @@ ubuntu:
     apt-get install opencv boost
 
 
-//=======
-// build
-//=======
+# build
 
 cd face-master
 cd src
@@ -34,36 +32,30 @@ cmake .
 make
 
 
-//======
-// run
-//======
+# run
 
-// training program
-//-------------------------------
+# training program
 
 usage: ./train /path/to/test/folder [det]
-# train folder must have 2 subdir: female and male
+train folder must have 2 subdir: female and male
 
-# e.g.
+e.g.
     ./train trainSet       # will look for folder: trainSet_output
                            # if exists，then will not do face-detection again
     ./train trainSet det   # force re-do face-detection
 
 
-// test program
-//-------------------------------
+# test program
 
 usage: ./test /path/to/test/file/or/folder [cal]
 
-# e.g.
+e.g.
     ./test testpic/1.jpg        # output gender result only
     ./test testSet       cal    # output calssfication precision
                                 # test folder for calulation must have 2 subdir: female and male
 
 
-//===========
-// file list
-//===========
+# file list
 
 README.md                         # current file
 haarcascade_frontalface_alt.xml   # face detection from opencv 2.4.9
@@ -76,8 +68,7 @@ testSet/                          # test set for precision evaluation
 ignore/                           # reference file and scripts, can ignore
 
 
-// source files under src/
-//-------------------------
+# source files under src/
 
 CMakeLists.txt                    # cmake file
 
@@ -94,13 +85,14 @@ utils.h                            # shared by trMain and testMain
 utils.cpp
 
 
-//========
-// result
-//========
+# Result and video demo
+
+Result:
+    precesion up to 79%
 
 Demo:
     https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be
 
-Result:
-    precesion up to 79%
+
+
 
