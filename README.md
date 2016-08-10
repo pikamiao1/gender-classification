@@ -35,28 +35,27 @@ make <br />
 ## training program  
 
 **usage: ./train /path/to/test/folder [det]**  <br />
+train folder must have 2 subdir: female and male  <br />
 
-e.g.
-    ./train trainSet------- # will look for folder: trainSet_output <br />
-    ----------------------- # if exists，then will not do face-detection again <br />
-    ----------------------- # train folder must have 2 subdir: female and male  <br />
-    ./train trainSet det--- # force re-do face-detection  <br />
+e.g. <br />
+    ./train trainSet ----------- # will look for folder: trainSet_output, if exists，then will not do face-detection again <br />
+    ./train trainSet det ------- # force re-do face-detection  <br />
 
 
 ## test program  
 
 **usage: ./test /path/to/test/file/or/folder [cal]**  <br />
+test folder for calulation must have 2 subdir: female and male <br />
 
-e.g.  
-    ./test testpic/1.jpg------- # output gender result only  <br />
-    ./test testSet cal--------- # output calssfication precision <br />
-    --------------------------- # test folder for calulation must have 2 subdir: female and male <br />
-
+e.g. <br />
+    ./test testpic/1.jpg ------ # output gender result only  <br />
+    ./test testSet cal -------- # output calssfication precision <br />
+    
 
 # file list
 
 README.md ------------------------# current file  <br />
-haarcascade_frontalface_alt.xml --# face detection from opencv 2.4.9  <br />
+haarcascade_frontalface_alt.xml - # face detection from opencv 2.4.9  <br />
 
 src/ ---------------------------- # all source file  <br />
 trainSet/ ----------------------- # training set, including female and male pics <br />
@@ -86,10 +85,10 @@ utils.cpp <br />
 # Result and video demo
 
 Result: <br />
------- both female and male recognition precesion up to 79% <br />
+both female and male recognition precesion up to **79%** <br />
 
 Demo: <br />
------- https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be <br />
+https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be <br />
 
 
 
