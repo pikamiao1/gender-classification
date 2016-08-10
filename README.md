@@ -4,8 +4,7 @@ Aug 2016
 Project for COMP7502  
 Gender Classification  
 
-Group 23:  
-    LIN Zhen XU Linxiao ZHU Yilei  
+Group 23: LIN Zhen, XU Linxiao, ZHU Yilei  
 
 
 # dependency
@@ -13,11 +12,11 @@ Group 23:
 opencv 2.4.9 <br />
 boost 1.60.0 <br />
 
-MacOS: <br />
------ brew install opencv boost <br />
+**MacOS:** <br />
+brew install opencv boost <br />
 
-ubuntu: <br />
----- apt-get install opencv boost <br />
+**ubuntu:** <br />
+apt-get install opencv boost <br />
 
 
 # build  
@@ -35,6 +34,7 @@ make <br />
 ## training program  
 
 **usage: ./train /path/to/test/folder [det]**  <br />
+
 train folder must have 2 subdir: female and male  <br />
 
 e.g. <br />
@@ -45,6 +45,7 @@ e.g. <br />
 ## test program  
 
 **usage: ./test /path/to/test/file/or/folder [cal]**  <br />
+
 test folder for calulation must have 2 subdir: female and male <br />
 
 e.g. <br />
@@ -53,6 +54,8 @@ e.g. <br />
     
 
 # file list
+
+## files under first level
 
 README.md ------------------------# current file  <br />
 haarcascade_frontalface_alt.xml - # face detection from opencv 2.4.9  <br />
@@ -89,7 +92,3 @@ both female and male recognition precesion up to **79%** <br />
 
 Demo: <br />
 https://www.youtube.com/watch?v=aWE7YZFow1o&feature=youtu.be <br />
-
-
-
-
